@@ -3,11 +3,22 @@ module.exports = {
   extends: [
     'plugin:nuxt/recommended',
     'plugin:vue/recommended',
+    'plugin:import/recommended',
   ],
-  plugins: ['vue', 'nuxt', 'import'],
+  plugins: ['nuxt', 'vue', 'import', 'standard', 'prettier'],
   rules: {
     'vue/multi-word-component-names': 0,
-    'import/no-named-as-default': 0,
     'vue/singleline-html-element-content-newline': 0,
+    'prettier/prettier': [
+      'error',
+      {
+        semi: false,
+        singleQuote: true,
+        printWidth: 120,
+        tabWidth: 2,
+        trailingComma: 'all',
+        endOfLine: 'crlf',
+      },
+    ],
   },
 }
